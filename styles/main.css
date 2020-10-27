@@ -1,1 +1,50 @@
-/* No CSS */
+.heading {
+  max-width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.heading h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 2rem;
+}
+
+.about {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  max-width: 70%;
+  max-height: 70%;
+  border-radius: 30px;
+  margin: auto;
+  padding: 3rem;
+}
+
+.about p, .about .cross {
+  background-color: white;
+  color: black;
+}
+
+.about .cross {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 2rem;
+  cursor: pointer;
+}
