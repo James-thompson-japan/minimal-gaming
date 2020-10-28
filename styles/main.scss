@@ -37,3 +37,27 @@
     cursor: pointer;
   }
 }
+
+.games{
+  margin: 2rem auto;
+display: flex;
+justify-content: center;
+  a{
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    img{
+      width: 200px;
+      margin: auto;
+      display: block;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+      border-radius: 10px;
+    }
+  }
+}
