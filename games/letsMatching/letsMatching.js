@@ -51,26 +51,28 @@ const cardsToChooseFrom = [
 
 const gridOne = document.querySelector(".gridOne");
 const gridOneHeading = document.querySelector(".gridOneHeading");
+const container = document.querySelector(".container");
+const grids = document.querySelector(".grids")
 const cardsToPlayWith = [];
 const cardsToPlayWithImages = [];
-
 let remainingAnimals = 6;
+let showingStartButton = false
 
 function selectToPlayWith() {
+  if(remainingAnimals !== 0){
   const cards = document.querySelectorAll("img");
   let id = this.getAttribute("data-id");
-  cardsToPlayWithImages.push(cards[id],cards[id])
+  cardsToPlayWithImages.push(cardsToChooseFrom[id], cardsToChooseFrom[id]);
+  cardsToPlayWith.push(cardsToChooseFrom[id])
   cards[id].style.visibility = "hidden";
-  console.log(cardsToPlayWithImages);
   remainingAnimals--;
-  console.log(remainingAnimals);
-
   if (remainingAnimals !== 1) {
     gridOneHeading.textContent = `Please choose ${remainingAnimals} more animals.`;
   } else if (remainingAnimals === 1) {
     gridOneHeading.textContent = `Please choose ${remainingAnimals} more animal.`;
   }
-  if (remainingAnimals === 0) {
+}
+  if ((remainingAnimals === 0) && (!showingStartButton) ) {
     startTheGame();
   }
 }
@@ -87,12 +89,22 @@ function initialLoad() {
 }
 
 function startTheGame() {
-  const button = document.createElement("button")
+  const button = document.createElement("button");
+  button.innerHTML = "START!";
+  button.classList.add("start");
+  grids.append(button);
+  gridOneHeading.textContent = "Find all the matching pairs. Good luck!";
+  showingStartButton = true
+  button.addEventListener("click", loadGame)
+}
+
+function loadGame() {
   gridOne.innerHTML = ""
-  button.innerHTML = "START!"
-  button.classList.add()
-  gridOne.append(button)
-  gridOneHeading.textContent = "Find all the matching pairs. Good luck!"
+  for(let i = 0;i < cardsToPlayWithImages.length; i++){
+    let card = document.createElement("img")
+    card.setAttribute("src","./images/question.png") 
+    gridOne.append(card)
+  }
 }
 
 initialLoad();
