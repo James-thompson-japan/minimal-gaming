@@ -104,7 +104,7 @@ function startTheGame() {
 function loadGame() {
   gridOne.innerHTML = "";
   document.querySelector("button").style.display = "none";
-  // cardsToPlayWithImages.sort(() => Math.random() - 0.5);
+  cardsToPlayWithImages.sort(() => Math.random() - 0.5);
   for (let i = 0; i < cardsToPlayWithImages.length; i++) {
     let card = document.createElement("img");
     card.setAttribute("src", "./images/question.png");
