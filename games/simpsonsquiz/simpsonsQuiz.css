@@ -1,0 +1,81 @@
+body {
+  background-color: #f0d028;
+}
+
+section {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+section h1 {
+  margin: 2rem auto;
+  font-size: 3rem;
+}
+
+section .instructions {
+  background-color: #68c7fd;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 40px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+section .instructions p {
+  font-size: 1.2rem;
+  text-align: left;
+  text-align: center;
+}
+
+section .start {
+  background: #68c7fd;
+  display: block;
+  margin: 2rem auto;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 90px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 90px;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+}
+
+.gameContainer .imageDiv {
+  background-color: #68c7fd;
+  padding: 2rem;
+  width: 90%;
+  max-width: 1000px;
+  margin: 1rem auto;
+  border-radius: 50px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  height: 20rem;
+}
+
+.gameContainer .imageDiv img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.answersDiv {
+  background-color: #68c7fd;
+  padding: 2rem;
+  width: 90%;
+  max-width: 1000px;
+  margin: 1rem auto;
+  border-radius: 50px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.answersDiv div {
+  background-color: #68c7fd;
+  border: white 1px solid;
+  border-radius: 50px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}

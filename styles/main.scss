@@ -1,3 +1,7 @@
+*{
+ background-color: #4E18DC;;
+}
+
 .heading {
   max-width: 1000px;
   display: flex;
@@ -42,6 +46,7 @@
   margin: 2rem auto;
 display: flex;
 justify-content: center;
+flex-wrap: wrap;
   a{
     border-radius: 30px;
     display: flex;
@@ -52,6 +57,7 @@ justify-content: center;
     height: 250px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    margin-top: 1rem ;
     img{
       width: 200px;
       margin: auto;

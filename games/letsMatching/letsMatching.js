@@ -104,7 +104,7 @@ function startTheGame() {
 function loadGame() {
   gridOne.innerHTML = "";
   document.querySelector("button").style.display = "none";
-  // cardsToPlayWithImages.sort(() => Math.random() - 0.5);
+  cardsToPlayWithImages.sort(() => Math.random() - 0.5);
   for (let i = 0; i < cardsToPlayWithImages.length; i++) {
     let card = document.createElement("img");
     card.setAttribute("src", "./images/question.png");
@@ -124,7 +124,6 @@ function flipCard() {
       checkForMatch();
     }, 1000);
   }
-  console.log(chosenCards);
 }
 
 function checkForMatch() {
@@ -133,8 +132,6 @@ function checkForMatch() {
   let cardTwo = chosenCards[1];
   let idOne = chosenCardsIds[0];
   let idTwo = chosenCardsIds[1];
-  console.log(idOne, idTwo);
-
   if (idOne === idTwo) {
     alert("You clicked on the same card!");
     cards[idOne].setAttribute("src", "./images/question.png");
@@ -150,11 +147,13 @@ function checkForMatch() {
   }
 
   if (cardsWon.length === cardsToPlayWithImages.length / 2) {
-    gridOneHeading.textContent = "Well done. You have completed the game!"
+    gridOneHeading.textContent = "Well done. You have completed the game!";
     let button = document.querySelector("button");
     button.style.display = "block";
-    button.innerHTML = "Play again."
-    button.addEventListener("click",() => {location.reload();})
+    button.innerHTML = "Play again.";
+    button.addEventListener("click", () => {
+      location.reload();
+    });
   }
 
   chosenCards = [];
