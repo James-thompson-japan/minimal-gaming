@@ -24,8 +24,9 @@
   left: 0;
   right: 0;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-  max-width: 70%;
-  max-height: 70%;
+  width: 90%;
+  max-width: 800px;
+  max-height: 50%;
   border-radius: 30px;
   margin: auto;
   padding: 3rem;
@@ -57,9 +58,11 @@ flex-wrap: wrap;
     height: 250px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-    margin-top: 1rem ;
+    margin: 1rem ;
     img{
       width: 200px;
+      height: 200px;
+      object-fit: cover;
       margin: auto;
       display: block;
       box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;

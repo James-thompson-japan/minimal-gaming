@@ -1,5 +1,18 @@
+// VARIABLES
+
 const container = document.querySelector(".container");
+const gameContainer = document.querySelector(".gameContainer");
 const start = document.querySelector(".start");
+const imageDivImg = document.querySelector(".imageDivImg");
+const firstScreenItems = document.querySelector(".firstScreenItems");
+
+const answerOne = document.querySelector(".answerOne");
+const answerTwo = document.querySelector(".answerTwo");
+const answerThree = document.querySelector(".answerThree");
+const answers = document.querySelectorAll(".answer")
+
+// DATA ARRAYS
+
 const names = [
   "Apu Nahasapeemapetilon",
   "Bart Simpson",
@@ -20,7 +33,7 @@ const names = [
   "Waylon Smithers",
 ];
 
-const normalimages = [
+let normalimages = [
   "images/ApuNahasapeemapetilon.png",
   "images/BartSimpson.png",
   "images/ChiefWiggum.png",
@@ -40,7 +53,7 @@ const normalimages = [
   "images/WaylonSmithers.png",
 ];
 
-const silhouetteimages = [
+let silhouetteimages = [
   "images/BLKApuNahasapeemapetilon.png",
   "images/BLKBartSimpson.png",
   "images/BLKChiefWiggum.png",
@@ -60,22 +73,55 @@ const silhouetteimages = [
   "images/BLKWaylonSmithers.png",
 ];
 
+// LOADING EVENT LISTENER
+
 start.addEventListener("click", loadGame);
 
-function loadGame() {
-container.innerHTML = ``;
-let gameContainer = document.createElement("div");
-gameContainer.classList.add("gameContainer")
-container.append(gameContainer);
-gameContainer.innerHTML = `
-    <div class="imageDiv">
-      <img src="images/Duffman.png" alt="characterImage"/>
-    </div>
+// GAME LOAD FUNCTION
 
-    <div class="answersDiv">
-      <div class="answerOne">Homer Simpson</div>
-      <div class="answerTwo">Homer Simpson</div>
-      <div class="answerThree">Homer Simpson</div>
-    </div>
-  `;
+function insertAnswers(correctAnswer) {
+  // INSERT CORRECT ANSWER
+let randomNo = Math.floor(Math.random() * 3)
+answers[randomNo].innerHTML = correctAnswer
+let unusedNames = names.filter(name => name !== correctAnswer)
+
+let wrongAnswerOne = names[Math.floor(Math.random() * names.length)]
+unusedNames = names.filter(name => name !== wrongAnswerOne)
+let wrongAnswerTwo = names[Math.floor(Math.random() * names.length)]
+
+console.log(unusedNames)
+
+for(let i = 0;i < 2;i++){
+  let answer
+if( i === 0 ){
+  answer = wrongAnswerOne
+} else {answer = wrongAnswerTwo}
+
+if(answerOne.innerHTML === ""){
+  answerOne.innerHTML = answer;
+} else if(answerTwo.innerHTML === ""){
+  answerTwo.innerHTML = answer
+} else {answerThree.innerHTML = answer}
+console.log(i)
 }
+
+
+
+}
+
+function loadGame() {
+
+  firstScreenItems.remove();
+  gameContainer.style.display = "block";
+
+  let randomNo = Math.floor(Math.random() * silhouetteimages.length);
+  let firstImage = silhouetteimages[randomNo];
+  let correctAnswer = names[randomNo];
+
+  silhouetteimages = silhouetteimages.filter(image => image !== firstImage);
+  
+  insertAnswers(correctAnswer)
+
+  imageDivImg.setAttribute("src",firstImage)
+}
+

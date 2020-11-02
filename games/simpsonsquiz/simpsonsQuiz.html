@@ -17,17 +17,27 @@
     <link rel="stylesheet" href="./simpsonsQuiz.css" />
     <title>Simpsons Quiz</title>
     <section class="container">
-      <h1>Simpsons Silhouette Quiz</h1>
-      <div class="instructions">
-        <p>
-          Take a close look at the silhouette and guess which Simpsons character
-          it is from the three options.
-        </p>
+      <div class="firstScreenItems">
+        <h1>Simpsons Silhouette Quiz</h1>
+        <div class="instructions">
+          <p>
+            Take a close look at the silhouette and guess which Simpsons
+            character it is from the three options.
+          </p>
+        </div>
+        <button class="start">START</button>
       </div>
-      <button class="start">START</button>
+      <div class="gameContainer">
+        <div class="imageDiv">
+          <img class="imageDivImg" src="" alt="characterImage" />
+        </div>
 
-      <div class="gameContainer"></div>
-
+        <div class="answersDiv">
+          <div class="answer answerOne"></div>
+          <div class="answer answerTwo"></div>
+          <div class="answer answerThree"></div>
+        </div>
+      </div>
     </section>
   </head>
   <body>

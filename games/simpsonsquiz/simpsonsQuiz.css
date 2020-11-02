@@ -41,6 +41,10 @@ section .start {
   font-size: 2rem;
 }
 
+.gameContainer {
+  display: none;
+}
+
 .gameContainer .imageDiv {
   background-color: #68c7fd;
   padding: 2rem;
@@ -53,7 +57,7 @@ section .start {
   height: 20rem;
 }
 
-.gameContainer .imageDiv img {
+.gameContainer .imageDiv .imageDivImg {
   max-width: 100%;
   max-height: 100%;
 }
